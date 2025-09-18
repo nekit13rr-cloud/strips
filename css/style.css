@@ -1,0 +1,11 @@
+:root {
+    --primary-pink: #ff9bb9;
+    --light-pink: #ffd1dc;
+    --peach: #ffcc99;
+    --dark-pink: #ff4d8d;
+    --text-color: #5a3d5c;
+    --light-text: #7a5c7d;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, var(--light-pink) 0%, var(--peach) 100%);
+}
+/* ... Вставляем твой CSS целиком ... */
