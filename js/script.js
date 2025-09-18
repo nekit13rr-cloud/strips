@@ -1,13 +1,11 @@
-// Калькулятор дохода
-function calculateIncome() {
-    const hours = parseInt(document.getElementById('hours').value) || 0;
-    const hourlyRate = parseInt(document.getElementById('hourlyRate').value) || 0;
-    const tariff = parseFloat(document.getElementById('tariff').value);
-    const result = (hours * hourlyRate) * (1 - tariff);
-    document.getElementById('result').textContent = result.toLocaleString('ru-RU') + ' ₽';
-}
-// Прокрутка к началу при клике на логотип
-document.getElementById('logoLink').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+// Простейшая анимация появления блоков при скролле
+document.addEventListener("scroll", () => {
+  document.querySelectorAll(".benefit-card, .tariff-card").forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 50) {
+      el.style.transition = "all .8s ease";
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }
+  });
 });
